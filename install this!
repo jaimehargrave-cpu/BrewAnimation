@@ -1,0 +1,14 @@
+
+import itertools
+import sys
+import time
+
+frames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+
+try:
+    for frame in itertools.cycle(frames):
+        sys.stdout.write(f"\r{frame}")
+        sys.stdout.flush()
+        time.sleep(0.1)
+except KeyboardInterrupt:
+    print()
